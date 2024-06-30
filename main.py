@@ -20,7 +20,7 @@ class DiscordBot(discord.Client):
         await message_sent.message_sent(self, message) 
         
     async def on_presence_update(self, before, after):
-        await the_alarm.the_alarm(self, before, after)
+        await the_alarm.the_alarm(before, after)
 
 client = DiscordBot(intents=intents)
 client.run(constants.TOKEN)
